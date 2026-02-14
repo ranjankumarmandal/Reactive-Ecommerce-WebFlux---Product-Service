@@ -1,0 +1,23 @@
+package com.ranjan.product_service.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table("products")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Product {
+
+    @Id
+    private Long id;
+
+    private String name;
+    private String description;
+    private Double price;
+}
